@@ -10,3 +10,8 @@ Template.registerHelper('getQuestion', function(questionNumber) {
   var qOrder = questionOrder(Session.get('participantId'));
   return qOrder[questionNumber];
 });
+
+Template.registerHelper('getQuestionString', function(questionNumber) {
+  var qOrder = questionOrder(Session.get('participantId'));
+  return JSON.stringify(qOrder[questionNumber]);
+});
