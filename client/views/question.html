@@ -1,22 +1,42 @@
 <template name="question">
 
-<b>Question:</b> {{add questionNumber 1}} of {{add nQuestions}}<br/>
+<b>Question</b> {{add questionNumber 1}} of {{nQuestions}}<br/>
 <hr>
 
 <img src="{{getQuestionImagePath questionNumber}}.png" alt="Robot face image"/>
 
-<form class="form-horizontal">
+<form class="form-horizontal" id='formeroni'>
 
-  <!--<b>Question:</b> {{getQuestionString questionNumber}}-->
+  <h4 id="likability-title">Likability</h4>
 
-  {{>questionField
-    id="likability"
-    label="Likability"
-    type="number"
-    placeholder="1-7"
-  }}
+  <div class="btn-group pad" data-toggle="buttons">
+      <label class="btn btn-default">
+          <input type="radio"  name="lika" value="1" /> 1
+      </label>
+      <label class="btn btn-default">
+          <input type="radio"  name="lika" value="2" /> 2
+      </label>
+      <label class="btn btn-default">
+          <input type="radio"  name="lika" value="3" /> 3
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="lika" value="4" /> 4
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="lika" value="5" /> 5
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="lika" value="6" /> 6
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="lika" value="7" /> 7
+      </label>
+  </div>
 
-  <button type="submit" class="btn btn-default">Next!</button>
+
+  <button type="submit" class="btn btn-default">Next</button>
 </form>
+
+<p id="error-text" style="color:red"></p>
 
 </template>
