@@ -26,7 +26,7 @@ Template.registerHelper('getQuestionImagePath', function(questionNumber) {
   qName += "mouth"+question.mouth;
 
   var path = 'img/' + qName;
-  console.log(path);
+  console.log("Q:"+questionNumber+"/"+(N_QUESTIONS-1), qName);
   return path;
 });
 
@@ -34,5 +34,6 @@ Template.registerHelper('questionnaireIsDone', function() {
   var questionNumber = Session.get('currentQuestionNumber');;
   var qOrder = questionOrder(Session.get('participantId'));
   var nQuestions = N_QUESTIONS;
-  return questionNumber >= nQuestions ? "YES":"NO";
+
+  return questionNumber >= nQuestions;
 });
