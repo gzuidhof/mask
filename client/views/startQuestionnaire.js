@@ -13,8 +13,8 @@ if (Meteor.isClient){
       console.log("Submitting questionnaire", participant);
 
       Participants.insert(participant, function(error, id) {
-        Session.set('participantId', id);
-        Session.set('currentQuestionNumber', 0);
+        Session.setPersistent('participantId', id);
+        Session.setPersistent('currentQuestionNumber', 0);
         console.log("Participant ID: ", id);
       }
       );

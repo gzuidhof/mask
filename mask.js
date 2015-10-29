@@ -8,13 +8,12 @@ if (Meteor.isServer) {
   });
 }
 
-HEADS=[{head:0},{head:1}];
+HEADS=[{base:0},{base:1}];
 EYES=[{eyes:0},{eyes:1}];
-EYEBROWS=[{eyebrows:0},{eyebrows:1}];
-MOUTH=[{mouth:0},{mouth:1}];
+NOSES=[{nose:0},{nose:1},{nose:2}];
+MOUTHS=[{mouth:0},{mouth:1},{mouth:2}];
 
-ALL_QUESTIONS = cartesian(HEADS,EYES,EYEBROWS,MOUTH);
-ALL_QUESTIONS = _.map(ALL_QUESTIONS, function(x) {
+ALL_QUESTIONS = _.map(cartesian(HEADS,EYES,NOSES,MOUTHS), function(x) {
   var newQ = {}
   _.each(x, function(y) {
     _.extend(newQ, y);

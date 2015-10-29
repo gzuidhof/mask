@@ -15,3 +15,18 @@ Template.registerHelper('getQuestionString', function(questionNumber) {
   var qOrder = questionOrder(Session.get('participantId'));
   return JSON.stringify(qOrder[questionNumber]);
 });
+
+Template.registerHelper('getQuestionImagePath', function(questionNumber) {
+  var qOrder = questionOrder(Session.get('participantId'));
+  var question = qOrder[questionNumber];
+  console.log(question);
+
+  var qName = "Base"+question.base;
+  qName += "Eyes"+question.eyes;
+  qName += "Nose"+question.nose;
+  qName += "mouth"+question.mouth;
+
+  var path = 'img/' + qName;
+  console.log(path);
+  return path;
+});
