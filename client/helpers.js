@@ -19,7 +19,6 @@ Template.registerHelper('getQuestionString', function(questionNumber) {
 Template.registerHelper('getQuestionImagePath', function(questionNumber) {
   var qOrder = questionOrder(Session.get('participantId'));
   var question = qOrder[questionNumber];
-  console.log(question);
 
   var qName = "Base"+question.base;
   qName += "Eyes"+question.eyes;
@@ -29,4 +28,11 @@ Template.registerHelper('getQuestionImagePath', function(questionNumber) {
   var path = 'img/' + qName;
   console.log(path);
   return path;
+});
+
+Template.registerHelper('questionnaireIsDone', function() {
+  var questionNumber = Session.get('currentQuestionNumber');;
+  var qOrder = questionOrder(Session.get('participantId'));
+  var nQuestions = N_QUESTIONS;
+  return questionNumber >= nQuestions ? "YES":"NO";
 });

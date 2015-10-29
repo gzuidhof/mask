@@ -21,6 +21,8 @@ ALL_QUESTIONS = _.map(cartesian(HEADS,EYES,NOSES,MOUTHS), function(x) {
   return newQ;
 });
 
+N_QUESTIONS = ALL_QUESTIONS.length;
+
 function cartesian() {
     var r = [], arg = arguments, max = arg.length-1;
     function helper(arr, i) {

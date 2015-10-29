@@ -7,7 +7,12 @@
   {{#unless participant}}
     {{> startQuestionnaire}}
   {{else}}
-    {{> question questionNumber=currentQuestionNumber}}
+
+    {{#unless questionnaireIsDone}}
+      {{> question questionNumber=currentQuestionNumber}}
+    {{else}}
+      {{> afterQuestionnaire }}
+    {{/unless}}
 
   {{/unless}}
 </body>
