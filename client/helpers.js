@@ -37,3 +37,11 @@ Template.registerHelper('questionnaireIsDone', function() {
 
   return questionNumber >= nQuestions;
 });
+
+Template.registerHelper('nQuestions', function() {
+  return N_QUESTIONS;
+});
+
+Template.registerHelper('add', function(a,b) {
+  return a+b;
+});

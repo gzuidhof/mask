@@ -1,12 +1,13 @@
 <template name="question">
 
+<b>Question:</b> {{add questionNumber 1}} of {{add nQuestions}}<br/>
+<hr>
+
 <img src="{{getQuestionImagePath questionNumber}}.png" alt="Robot face image"/>
 
 <form class="form-horizontal">
 
-  <b>QuestionNumber:</b> {{questionNumber}}<br>
-
-  <b>Question:</b> {{getQuestionString questionNumber}}
+  <!--<b>Question:</b> {{getQuestionString questionNumber}}-->
 
   {{>questionField
     id="likability"
@@ -14,8 +15,6 @@
     type="number"
     placeholder="1-7"
   }}
-
-  {{questionnaireIsDone questionNumber}}
 
   <button type="submit" class="btn btn-default">Next!</button>
 </form>
