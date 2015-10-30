@@ -45,3 +45,7 @@ Template.registerHelper('nQuestions', function() {
 Template.registerHelper('add', function(a,b) {
   return a+b;
 });
+
+Template.registerHelper('showData', function() {
+  return window.location.hash == "#data";
+});
