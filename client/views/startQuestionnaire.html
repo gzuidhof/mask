@@ -1,26 +1,93 @@
 <template name="startQuestionnaire">
 
-<h4>Pre-questionnaire</h4>
+<h2>Robot facial features</h2>
 <hr>
+<p>
 
+<h4>Instructions</h4>
+The goal of this experiment is to investigate which features of a neutral robot face are necessary for a robot to be likeable.
+This is important because as research in social robots increases, potential users should feel comfortable around a robot.
+In this experiment you will rate several computer-generated robot faces for their <i><b>likeability</b></i>.</p>
+
+<p> If you are not sure how to rate likeability, you can rate whether you would feel comfortable around a robot with the depicted face.</p>
+
+<p>The collected data will be kept confidential. <br><i>Any questions can be sent to <b>robotfaces@guido.io</b></i></p>
+
+<h4>How long will this take me?</h4>
+<p>A total of 36 different robot faces will be shown.
+In total this experiment will probably take 5-10 minutes.</p>
+
+
+
+<hr>
+<h3>Pre-questionnaire</h3>
 <form class="form-horizontal">
 
+
   {{>questionField
-    id="name"
-    label="Name"
+    id="gender"
+    label="Gender"
     type="text"
-    placeholder="Jart Bacobs"
+    placeholder="male or female"
   }}
+
 
   {{>questionField
     id="age"
     label="Age"
     type="number"
-    placeholder="33"
+    placeholder=""
   }}
+
+<div style="margin-left: 30px; margin-top:30px">
+  <p><b>How familiar would you say you are with robots in general?</b></p>
+
+Very unfamiliar
+  <div class="btn-group pad" data-toggle="buttons">
+      <label class="btn btn-default">
+          <input type="radio"  name="fam" value="1" /> 1
+      </label>
+      <label class="btn btn-default">
+          <input type="radio"  name="fam" value="2" /> 2
+      </label>
+      <label class="btn btn-default">
+          <input type="radio"  name="fam" value="3" /> 3
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="fam" value="4" /> 4
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="fam" value="5" /> 5
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="fam" value="6" /> 6
+      </label>
+      <label class="btn btn-default">
+          <input type="radio" name="fam" value="7" /> 7
+      </label>
+  </div>
+Very familiar
+</div>
+<hr>
+
+<h3>Informed consent</h3>
+
+
+<p>I hereby confirm that I was satisfactorily informed about the research.
+   I was allowed sufficient time to consider whether to give my consent and was also given the opportunity to ask questions.
+   Any questions I asked were answered to my satisfaction.
+    I am aware that participation is entirely voluntary and that I may withdraw my consent at any time without giving a reason.</p>
+
+<div style="margin-left: 30px; margin-bottom: 30px" class="checkbox">
+  <input type="checkbox" id="consent"/>
+   <b>I hereby consent to participate in the experiment referred to above and for my recorded activity to be used anonymously and for research purposes only.</b>
+</div>
 
   <button type="submit" class="btn btn-default">Let's get started!</button>
 </form>
+
+<p id="error-text-pre" style="color:red"></p>
+
 
 </template>
 
