@@ -3,7 +3,11 @@ Simple online questionnaire app.
 
 As part of the *Advanced Research Methods* we conducted a study involving the likeability of robot faces with certain facial features, a follow-up investigation to [*Not all robots are created equal* (Disalvo et al.,(2002))](http://dl.acm.org/citation.cfm?id=778756). 
 
-We opted for an online questionnaire format, but Google Forms and competitors did not have features for randomization of order that we required for the stimuli. So this Meteor app was created for this purpose. [Screenshot](
+We opted for an online questionnaire format, but Google Forms and competitors did not have features for randomization of order that we required for the stimuli. So this Meteor app was created for this purpose.
+
+
+##Screenshot
+![mask screenshot](https://raw.githubusercontent.com/gzuidhof/mask/master/screenshot.png)
 
 ##Dependencies
 
